@@ -1,0 +1,117 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* fire text */
+body{
+	background: #262626 
+}
+
+.title{
+	text-align: center;
+	margin-top:200px;
+	font-family: Arial;
+	font-size: 160px;
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.2);
+	background: url(https://vignette.wikia.nocookie.net/magicbook/images/2/21/1_%D0%9E%D0%B3%D0%BE%D0%BD%D1%8C.jpg/revision/latest/scale-to-width-down/620?cb=20180917181556&path-prefix=ru)repeat-x;
+	background-clip: text;
+	background-size: contain;
+    animation: fire 13s linear infinite;
+    height: 100vh;
+}
+
+@keyframes fire{
+	0%{
+		background-position: left 0, top 0;
+	}
+
+	50%{
+		background-position: left 150px, top -25px;
+	}
+	100%{
+		background-position: left 300px top 0;
+	}
+}
+
+/* typing text */
+.wrapper{
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #042f36
+}
+
+.title-typingText{
+	width: 26ch; /*Все символы в строке*/
+	color: white;
+	font-family: monospace;
+	font-size: 40px;
+	border-right: 4px solid orange;
+	overflow: hidden;
+	white-space: nowrap;/*запрещает перенос текста*/
+	animation:flashingBorder 0.75s step-end infinite, typingText 5s steps(26);
+}
+
+/*Мегающий бордер - анимация курсора*/
+@keyframes flashingBorder{
+	0%{
+		border-color: orange;
+	}
+	50%{
+		border-color: transparent;
+	}
+	100%{
+		border-color: orange;
+	}
+}
+
+@keyframes typingText{
+	from{
+		width: 0;
+	}
+}
+
+/* wave BG animation */
+.wrapper-wave-text-anim{
+	display: flex;
+	height: 100vh;
+	position: relative;
+}
+
+.main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url(convertImage/bg1.jpg) no-repeat center;
+	background-size: cover;
+	z-index: 3;
+}
+
+.main-title{
+	color: white;
+	font-size: 52px;
+	font-family: Arial;
+}
+
+.overlay{
+	width: 2%;
+	height: 100%;
+	position: relative;
+	z-index: 4;
+	background:url(convertImage/bg2.jpg) no-repeat center;
+	background-attachment: fixed;
+	transition: 1.2s linear;
+}
+
+.overlay:hover{
+	opacity: 0;
+	transition: 0s linear;
+}
