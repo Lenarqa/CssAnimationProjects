@@ -1,3 +1,5 @@
+[Зайти посмотреть / Enter to watch](https://lenarqa.github.io/CssAnimationProjects/)
+
 # CssAnimationProjects
 Animation CSS
 
@@ -8,4 +10,4 @@ Animation CSS
 ![typing](https://user-images.githubusercontent.com/37902865/82233786-b8843580-995a-11ea-98c3-e385eff0b6a7.jpg)
 
 ## waveBgAnimation
-![showImage](https://user-images.githubusercontent.com/37902865/82233760-b0c49100-995a-11ea-8b19-3519a54a4980.png)
+![showImage](https://user-images.githubusercontent.com/37902865/82241108-c7bcb080-9965-11ea-92fc-473d6d08270a.jpg)
