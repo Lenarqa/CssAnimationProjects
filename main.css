@@ -3,11 +3,27 @@
 	padding: 0;
 }
 
-/* fire text */
+
 body{
 	background: #262626 
 }
 
+/* scrollbar */
+/* Don`t work in Mozila */
+body::-webkit-scrollbar {
+	width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+	background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #6649b8;
+}
+
+
+/* fire text */
 .title{
 	text-align: center;
 	margin-top:200px;
@@ -17,8 +33,11 @@ body{
 	color: rgba(255,255,255,0.2);
 	background: url(https://vignette.wikia.nocookie.net/magicbook/images/2/21/1_%D0%9E%D0%B3%D0%BE%D0%BD%D1%8C.jpg/revision/latest/scale-to-width-down/620?cb=20180917181556&path-prefix=ru)repeat-x;
 	background-clip: text;
+	-webkit-background-clip: text;
 	background-size: contain;
-    animation: fire 13s linear infinite;
+	animation: fire 13s linear infinite;
+	-moz-animation: fire 13s linear infinite;
+	-webkit-animation:fire 13s linear infinite;
     height: 100vh;
 }
 
